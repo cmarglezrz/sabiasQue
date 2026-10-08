@@ -39,6 +39,13 @@
     [self mostrarInicio];
 }
 
+if ([[[NSProcessInfo processInfo] arguments]
+        containsObject:@"-captura-datos"]) {
+    [self elegir:@"Arte"];
+    [self irADatos];
+}
+
+
 - (UIColor *)colorConRojo:(CGFloat)r verde:(CGFloat)g azul:(CGFloat)b {
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
 }
