@@ -1,0 +1,41 @@
+
+name: Compilar Sabias Que iOS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Mostrar version de Xcode
+        run: xcodebuild -version
+
+      - name: Buscar proyectos Xcode
+        run: find . -name "*.xcodeproj"
+
+      - name: Compilar aplicacion
+        run: |
+          xcodebuild \
+            -project "Reto 3 - Sabias Que.xcodeproj" \
+            -scheme "Reto 3 - Sabias Que" \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Guardar aplicacion compilada
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SabiasQue-iOS-Simulator
+          path: build/Build/Products/Debug-iphonesimulator/*.app
+          if-no-files-found: error
