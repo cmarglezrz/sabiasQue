@@ -39,3 +39,73 @@ jobs:
           name: SabiasQue-iOS-Simulator
           path: build/Build/Products/Debug-iphonesimulator/*.app
           if-no-files-found: error
+
+
+      - name: Iniciar simulador iPhone
+        shell: bash
+        run: |
+          DEVICE_ID=$(python3 - <<'PY'
+          import json, subprocess
+          data = json.loads(subprocess.check_output(
+              ["xcrun", "simctl", "list", "devices", "available", "-j"]
+          ))
+          for devices in data["devices"].values():
+              for device in devices:
+                  if "iPhone" in device["name"]:
+                      print(device["udid"])
+                      raise SystemExit(0)
+          raise SystemExit("No hay simuladores iPhone disponibles")
+          PY
+          )
+          echo "DEVICE_ID=$DEVICE_ID" >> "$GITHUB_ENV"
+          xcrun simctl boot "$DEVICE_ID"
+          xcrun simctl bootstatus "$DEVICE_ID" -b
+
+      - name: Instalar aplicación
+        shell: bash
+        run: |
+          APP=$(find build/Build/Products/Debug-iphonesimulator \
+            -maxdepth 1 -name "*.app" -type d | head -n 1)
+
+          test -n "$APP"
+          echo "APP_PATH=$APP" >> "$GITHUB_ENV"
+
+          BUNDLE_ID=$(/usr/libexec/PlistBuddy \
+            -c "Print CFBundleIdentifier" "$APP/Info.plist")
+
+          echo "BUNDLE_ID=$BUNDLE_ID" >> "$GITHUB_ENV"
+          xcrun simctl install "$DEVICE_ID" "$APP"
+
+      - name: Capturar pantalla de inicio
+        shell: bash
+        run: |
+          mkdir -p capturas
+          xcrun simctl status_bar "$DEVICE_ID" \
+            override --time "9:41" \
+            --dataNetwork wifi --wifiMode active \
+            --wifiBars 3 --batteryState charged \
+            --batteryLevel 100
+
+          xcrun simctl launch "$DEVICE_ID" "$BUNDLE_ID"
+          sleep 5
+          xcrun simctl io "$DEVICE_ID" screenshot \
+            capturas/01-inicio.png
+
+      - name: Capturar pantalla de curiosidades
+        shell: bash
+        run: |
+          xcrun simctl terminate "$DEVICE_ID" "$BUNDLE_ID"
+          xcrun simctl launch "$DEVICE_ID" \
+            "$BUNDLE_ID" -captura-datos
+          sleep 5
+          xcrun simctl io "$DEVICE_ID" screenshot \
+            capturas/02-curiosidad.png
+
+      - name: Descargar capturas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Capturas-SabiasQue
+          path: capturas/*.png
+          if-no-files-found: warn
+          
