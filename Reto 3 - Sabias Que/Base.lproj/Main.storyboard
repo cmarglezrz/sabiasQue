@@ -77,7 +77,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-arte">
                                         <rect key="frame" x="65.5" y="326" width="115" height="46"/>
-                                        <color key="backgroundColor" red="0.9647" green="0.6078" blue="0.8275" alpha="1"/>
+                                        <color key="backgroundColor" red="0.9647" green="0.6078" blue="0.8275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="ARTE">
                                             <color key="titleColor" white="0.0" alpha="1"/>
@@ -92,7 +92,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-tecnologia">
                                         <rect key="frame" x="196.5" y="326" width="132" height="46"/>
-                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1"/>
+                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="TECNOLOGÍA">
                                             <color key="titleColor" white="0.0" alpha="1"/>
@@ -107,7 +107,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-naturaleza">
                                         <rect key="frame" x="124" y="384" width="145" height="46"/>
-                                        <color key="backgroundColor" red="0.8549" green="0.6627" blue="0.9569" alpha="1"/>
+                                        <color key="backgroundColor" red="0.8549" green="0.6627" blue="0.9569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="NATURALEZA">
                                             <color key="titleColor" white="0.0" alpha="1"/>
@@ -122,7 +122,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-mostrar-inicio">
                                         <rect key="frame" x="101.5" y="632" width="190" height="52"/>
-                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1"/>
+                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="MOSTRAR DATO">
                                             <color key="titleColor" white="0.0" alpha="1"/>
@@ -189,7 +189,7 @@
                                            translatesAutoresizingMaskIntoConstraints="NO"
                                            id="etiqueta-categoria">
                                         <rect key="frame" x="114" y="132" width="165" height="43"/>
-                                        <color key="backgroundColor" red="0.9765" green="0.8275" blue="0.6157" alpha="1"/>
+                                        <color key="backgroundColor" red="0.9765" green="0.8275" blue="0.6157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1"/>
                                     </label>
@@ -224,7 +224,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-otro-dato">
                                         <rect key="frame" x="101.5" y="537.5" width="190" height="52"/>
-                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1"/>
+                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="MOSTRAR DATO">
                                             <color key="titleColor" white="0.0" alpha="1"/>
@@ -239,7 +239,7 @@
                                             translatesAutoresizingMaskIntoConstraints="NO"
                                             id="boton-volver">
                                         <rect key="frame" x="101.5" y="609.5" width="190" height="48"/>
-                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1"/>
+                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" title="CAMBIAR CATEGORÍA">
                                             <color key="titleColor" white="0.0" alpha="1"/>
