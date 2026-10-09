@@ -1,324 +1,247 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB"
-          version="3.0"
-          toolsVersion="23500"
-          targetRuntime="iOS.CocoaTouch"
-          propertyAccessControl="none"
-          useAutolayout="YES"
-          useTraitCollections="YES"
-          useSafeAreas="YES"
-          colorMatched="YES"
-          initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23500" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light" />
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23500"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23500" />
+        <capability name="Safe area layout guides" minToolsVersion="9.0" />
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
     </dependencies>
     <scenes>
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r"
-                                customClass="ViewController"
-                                sceneMemberID="viewController">
-                    <view key="view"
-                          contentMode="scaleToFill"
-                          id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852" />
                         <subviews>
 
-                            <!-- Fondo -->
-                            <imageView clipsSubviews="YES"
-                                       userInteractionEnabled="NO"
-                                       contentMode="scaleAspectFill"
-                                       image="fondo"
-                                       translatesAutoresizingMaskIntoConstraints="NO"
-                                       id="img-fondo">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="img-fondo">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852" />
                             </imageView>
 
-                            <!-- Pantalla de inicio -->
-                            <view contentMode="scaleToFill"
-                                  translatesAutoresizingMaskIntoConstraints="NO"
-                                  id="vista-inicio">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vista-inicio">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759" />
                                 <subviews>
 
-                                    <label opaque="NO"
-                                           userInteractionEnabled="NO"
-                                           contentMode="left"
-                                           text="¿Sabías qué?"
-                                           textAlignment="center"
-                                           translatesAutoresizingMaskIntoConstraints="NO"
-                                           id="titulo-inicio">
-                                        <rect key="frame" x="70" y="65" width="253" height="35"/>
-                                        <fontDescription key="fontDescription"
-                                                         type="boldSystem"
-                                                         pointSize="27"/>
-                                        <color key="textColor" white="0.0" alpha="1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="¿Sabías qué?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="titulo-inicio">
+                                        <rect key="frame" x="70" y="65" width="253" height="35" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27" />
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                     </label>
 
-                                    <label opaque="NO"
-                                           userInteractionEnabled="NO"
-                                           contentMode="left"
-                                           text="Elige una categoría"
-                                           textAlignment="center"
-                                           translatesAutoresizingMaskIntoConstraints="NO"
-                                           id="subtitulo-inicio">
-                                        <rect key="frame" x="70" y="130" width="253" height="25"/>
-                                        <fontDescription key="fontDescription"
-                                                         type="system"
-                                                         pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Elige una categoría" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="subtitulo-inicio">
+                                        <rect key="frame" x="70" y="130" width="253" height="25" />
+                                        <fontDescription key="fontDescription" type="system" pointSize="15" />
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                     </label>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-arte">
-                                        <rect key="frame" x="65.5" y="326" width="115" height="46"/>
-                                        <color key="backgroundColor" red="0.9647" green="0.6078" blue="0.8275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-arte">
+                                        <rect key="frame" x="65.5" y="326" width="115" height="46" />
+                                        <color key="backgroundColor" red="0.9647" green="0.6078" blue="0.8275" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="ARTE">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="elegirArte:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-arte"/>
+                                            <action selector="elegirArte:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-arte" />
                                         </connections>
                                     </button>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-tecnologia">
-                                        <rect key="frame" x="196.5" y="326" width="132" height="46"/>
-                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-tecnologia">
+                                        <rect key="frame" x="196.5" y="326" width="132" height="46" />
+                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="TECNOLOGÍA">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="elegirTecnologia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-tecnologia"/>
+                                            <action selector="elegirTecnologia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-tecnologia" />
                                         </connections>
                                     </button>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-naturaleza">
-                                        <rect key="frame" x="124" y="384" width="145" height="46"/>
-                                        <color key="backgroundColor" red="0.8549" green="0.6627" blue="0.9569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-naturaleza">
+                                        <rect key="frame" x="124" y="384" width="145" height="46" />
+                                        <color key="backgroundColor" red="0.8549" green="0.6627" blue="0.9569" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="NATURALEZA">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="elegirNaturaleza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-naturaleza"/>
+                                            <action selector="elegirNaturaleza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-naturaleza" />
                                         </connections>
                                     </button>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-mostrar-inicio">
-                                        <rect key="frame" x="101.5" y="632" width="190" height="52"/>
-                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-mostrar-inicio">
+                                        <rect key="frame" x="101.5" y="632" width="190" height="52" />
+                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="MOSTRAR DATO">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="irADatos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-ir-datos"/>
+                                            <action selector="irADatos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-ir-datos" />
                                         </connections>
                                     </button>
 
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0"/>
+                                <color key="backgroundColor" white="1" alpha="0" colorSpace="calibratedWhite" />
                                 <constraints>
-                                    <constraint firstItem="titulo-inicio" firstAttribute="top" secondItem="vista-inicio" secondAttribute="top" constant="65" id="i01"/>
-                                    <constraint firstItem="titulo-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i02"/>
+                                    <constraint firstItem="titulo-inicio" firstAttribute="top" secondItem="vista-inicio" secondAttribute="top" constant="65" id="i01" />
+                                    <constraint firstItem="titulo-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i02" />
 
-                                    <constraint firstItem="subtitulo-inicio" firstAttribute="top" secondItem="titulo-inicio" secondAttribute="bottom" constant="30" id="i03"/>
-                                    <constraint firstItem="subtitulo-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i04"/>
+                                    <constraint firstItem="subtitulo-inicio" firstAttribute="top" secondItem="titulo-inicio" secondAttribute="bottom" constant="30" id="i03" />
+                                    <constraint firstItem="subtitulo-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i04" />
 
-                                    <constraint firstItem="boton-arte" firstAttribute="centerY" secondItem="vista-inicio" secondAttribute="centerY" constant="-30" id="i05"/>
-                                    <constraint firstItem="boton-arte" firstAttribute="trailing" secondItem="vista-inicio" secondAttribute="centerX" constant="-8" id="i06"/>
-                                    <constraint firstItem="boton-arte" firstAttribute="width" constant="115" id="i07"/>
-                                    <constraint firstItem="boton-arte" firstAttribute="height" constant="46" id="i08"/>
+                                    <constraint firstItem="boton-arte" firstAttribute="centerY" secondItem="vista-inicio" secondAttribute="centerY" constant="-30" id="i05" />
+                                    <constraint firstItem="boton-arte" firstAttribute="trailing" secondItem="vista-inicio" secondAttribute="centerX" constant="-8" id="i06" />
+                                    <constraint firstItem="boton-arte" firstAttribute="width" constant="115" id="i07" />
+                                    <constraint firstItem="boton-arte" firstAttribute="height" constant="46" id="i08" />
 
-                                    <constraint firstItem="boton-tecnologia" firstAttribute="centerY" secondItem="boton-arte" secondAttribute="centerY" id="i09"/>
-                                    <constraint firstItem="boton-tecnologia" firstAttribute="leading" secondItem="vista-inicio" secondAttribute="centerX" constant="8" id="i10"/>
-                                    <constraint firstItem="boton-tecnologia" firstAttribute="width" constant="132" id="i11"/>
-                                    <constraint firstItem="boton-tecnologia" firstAttribute="height" constant="46" id="i12"/>
+                                    <constraint firstItem="boton-tecnologia" firstAttribute="centerY" secondItem="boton-arte" secondAttribute="centerY" id="i09" />
+                                    <constraint firstItem="boton-tecnologia" firstAttribute="leading" secondItem="vista-inicio" secondAttribute="centerX" constant="8" id="i10" />
+                                    <constraint firstItem="boton-tecnologia" firstAttribute="width" constant="132" id="i11" />
+                                    <constraint firstItem="boton-tecnologia" firstAttribute="height" constant="46" id="i12" />
 
-                                    <constraint firstItem="boton-naturaleza" firstAttribute="top" secondItem="boton-arte" secondAttribute="bottom" constant="12" id="i13"/>
-                                    <constraint firstItem="boton-naturaleza" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i14"/>
-                                    <constraint firstItem="boton-naturaleza" firstAttribute="width" constant="145" id="i15"/>
-                                    <constraint firstItem="boton-naturaleza" firstAttribute="height" constant="46" id="i16"/>
+                                    <constraint firstItem="boton-naturaleza" firstAttribute="top" secondItem="boton-arte" secondAttribute="bottom" constant="12" id="i13" />
+                                    <constraint firstItem="boton-naturaleza" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i14" />
+                                    <constraint firstItem="boton-naturaleza" firstAttribute="width" constant="145" id="i15" />
+                                    <constraint firstItem="boton-naturaleza" firstAttribute="height" constant="46" id="i16" />
 
-                                    <constraint firstAttribute="bottom" secondItem="boton-mostrar-inicio" secondAttribute="bottom" constant="75" id="i17"/>
-                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i18"/>
-                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="width" constant="190" id="i19"/>
-                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="height" constant="52" id="i20"/>
+                                    <constraint firstAttribute="bottom" secondItem="boton-mostrar-inicio" secondAttribute="bottom" constant="75" id="i17" />
+                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="centerX" secondItem="vista-inicio" secondAttribute="centerX" id="i18" />
+                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="width" constant="190" id="i19" />
+                                    <constraint firstItem="boton-mostrar-inicio" firstAttribute="height" constant="52" id="i20" />
                                 </constraints>
                             </view>
 
-                            <!-- Pantallas de curiosidades -->
-                            <view hidden="YES"
-                                  contentMode="scaleToFill"
-                                  translatesAutoresizingMaskIntoConstraints="NO"
-                                  id="vista-datos">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vista-datos">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759" />
                                 <subviews>
 
-                                    <label opaque="NO"
-                                           userInteractionEnabled="NO"
-                                           text="¿Sabías qué?"
-                                           textAlignment="center"
-                                           translatesAutoresizingMaskIntoConstraints="NO"
-                                           id="titulo-datos">
-                                        <rect key="frame" x="70" y="65" width="253" height="35"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                        <color key="textColor" white="0.0" alpha="1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="¿Sabías qué?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="titulo-datos">
+                                        <rect key="frame" x="70" y="65" width="253" height="35" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27" />
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                     </label>
 
-                                    <label opaque="NO"
-                                           userInteractionEnabled="NO"
-                                           text="ARTE"
-                                           textAlignment="center"
-                                           translatesAutoresizingMaskIntoConstraints="NO"
-                                           id="etiqueta-categoria">
-                                        <rect key="frame" x="114" y="132" width="165" height="43"/>
-                                        <color key="backgroundColor" red="0.9765" green="0.8275" blue="0.6157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="ARTE" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etiqueta-categoria">
+                                        <rect key="frame" x="114" y="132" width="165" height="43" />
+                                        <color key="backgroundColor" red="0.9765" green="0.8275" blue="0.6157" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                     </label>
 
-                                    <view contentMode="scaleToFill"
-                                          translatesAutoresizingMaskIntoConstraints="NO"
-                                          id="tarjeta-dato">
-                                        <rect key="frame" x="28" y="279.5" width="337" height="230"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tarjeta-dato">
+                                        <rect key="frame" x="28" y="279.5" width="337" height="230" />
                                         <subviews>
-                                            <label opaque="NO"
-                                                   userInteractionEnabled="NO"
-                                                   text="Aquí aparecerá la curiosidad."
-                                                   textAlignment="center"
-                                                   numberOfLines="0"
-                                                   translatesAutoresizingMaskIntoConstraints="NO"
-                                                   id="etiqueta-dato">
-                                                <rect key="frame" x="20" y="85" width="297" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" text="Aquí aparecerá la curiosidad." textAlignment="center" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="etiqueta-dato">
+                                                <rect key="frame" x="20" y="85" width="297" height="60" />
+                                                <fontDescription key="fontDescription" type="system" pointSize="17" />
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.9"/>
+                                        <color key="backgroundColor" white="1" alpha="0.9" colorSpace="calibratedWhite" />
                                         <constraints>
-                                            <constraint firstItem="etiqueta-dato" firstAttribute="leading" secondItem="tarjeta-dato" secondAttribute="leading" constant="20" id="d01"/>
-                                            <constraint firstAttribute="trailing" secondItem="etiqueta-dato" secondAttribute="trailing" constant="20" id="d02"/>
-                                            <constraint firstItem="etiqueta-dato" firstAttribute="centerY" secondItem="tarjeta-dato" secondAttribute="centerY" id="d03"/>
+                                            <constraint firstItem="etiqueta-dato" firstAttribute="leading" secondItem="tarjeta-dato" secondAttribute="leading" constant="20" id="d01" />
+                                            <constraint firstAttribute="trailing" secondItem="etiqueta-dato" secondAttribute="trailing" constant="20" id="d02" />
+                                            <constraint firstItem="etiqueta-dato" firstAttribute="centerY" secondItem="tarjeta-dato" secondAttribute="centerY" id="d03" />
                                         </constraints>
                                     </view>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-otro-dato">
-                                        <rect key="frame" x="101.5" y="537.5" width="190" height="52"/>
-                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-otro-dato">
+                                        <rect key="frame" x="101.5" y="537.5" width="190" height="52" />
+                                        <color key="backgroundColor" red="0.0" green="0.8" blue="0.8863" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="MOSTRAR DATO">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="mostrarOtroDato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-otro"/>
+                                            <action selector="mostrarOtroDato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-otro" />
                                         </connections>
                                     </button>
 
-                                    <button opaque="NO"
-                                            contentMode="scaleToFill"
-                                            translatesAutoresizingMaskIntoConstraints="NO"
-                                            id="boton-volver">
-                                        <rect key="frame" x="101.5" y="609.5" width="190" height="48"/>
-                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boton-volver">
+                                        <rect key="frame" x="101.5" y="609.5" width="190" height="48" />
+                                        <color key="backgroundColor" red="0.8667" green="0.9765" blue="0.9294" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13" />
                                         <state key="normal" title="CAMBIAR CATEGORÍA">
-                                            <color key="titleColor" white="0.0" alpha="1"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite" />
                                         </state>
                                         <connections>
-                                            <action selector="volverAlInicio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-volver"/>
+                                            <action selector="volverAlInicio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="accion-volver" />
                                         </connections>
                                     </button>
 
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0"/>
+                                <color key="backgroundColor" white="1" alpha="0" colorSpace="calibratedWhite" />
                                 <constraints>
-                                    <constraint firstItem="titulo-datos" firstAttribute="top" secondItem="vista-datos" secondAttribute="top" constant="65" id="c01"/>
-                                    <constraint firstItem="titulo-datos" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c02"/>
+                                    <constraint firstItem="titulo-datos" firstAttribute="top" secondItem="vista-datos" secondAttribute="top" constant="65" id="c01" />
+                                    <constraint firstItem="titulo-datos" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c02" />
 
-                                    <constraint firstItem="etiqueta-categoria" firstAttribute="top" secondItem="titulo-datos" secondAttribute="bottom" constant="32" id="c03"/>
-                                    <constraint firstItem="etiqueta-categoria" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c04"/>
-                                    <constraint firstItem="etiqueta-categoria" firstAttribute="width" constant="165" id="c05"/>
-                                    <constraint firstItem="etiqueta-categoria" firstAttribute="height" constant="43" id="c06"/>
+                                    <constraint firstItem="etiqueta-categoria" firstAttribute="top" secondItem="titulo-datos" secondAttribute="bottom" constant="32" id="c03" />
+                                    <constraint firstItem="etiqueta-categoria" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c04" />
+                                    <constraint firstItem="etiqueta-categoria" firstAttribute="width" constant="165" id="c05" />
+                                    <constraint firstItem="etiqueta-categoria" firstAttribute="height" constant="43" id="c06" />
 
-                                    <constraint firstItem="tarjeta-dato" firstAttribute="centerY" secondItem="vista-datos" secondAttribute="centerY" constant="15" id="c07"/>
-                                    <constraint firstItem="tarjeta-dato" firstAttribute="leading" secondItem="vista-datos" secondAttribute="leading" constant="28" id="c08"/>
-                                    <constraint firstAttribute="trailing" secondItem="tarjeta-dato" secondAttribute="trailing" constant="28" id="c09"/>
-                                    <constraint firstItem="tarjeta-dato" firstAttribute="height" constant="230" id="c10"/>
+                                    <constraint firstItem="tarjeta-dato" firstAttribute="centerY" secondItem="vista-datos" secondAttribute="centerY" constant="15" id="c07" />
+                                    <constraint firstItem="tarjeta-dato" firstAttribute="leading" secondItem="vista-datos" secondAttribute="leading" constant="28" id="c08" />
+                                    <constraint firstAttribute="trailing" secondItem="tarjeta-dato" secondAttribute="trailing" constant="28" id="c09" />
+                                    <constraint firstItem="tarjeta-dato" firstAttribute="height" constant="230" id="c10" />
 
-                                    <constraint firstItem="boton-otro-dato" firstAttribute="top" secondItem="tarjeta-dato" secondAttribute="bottom" constant="28" id="c11"/>
-                                    <constraint firstItem="boton-otro-dato" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c12"/>
-                                    <constraint firstItem="boton-otro-dato" firstAttribute="width" constant="190" id="c13"/>
-                                    <constraint firstItem="boton-otro-dato" firstAttribute="height" constant="52" id="c14"/>
+                                    <constraint firstItem="boton-otro-dato" firstAttribute="top" secondItem="tarjeta-dato" secondAttribute="bottom" constant="28" id="c11" />
+                                    <constraint firstItem="boton-otro-dato" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c12" />
+                                    <constraint firstItem="boton-otro-dato" firstAttribute="width" constant="190" id="c13" />
+                                    <constraint firstItem="boton-otro-dato" firstAttribute="height" constant="52" id="c14" />
 
-                                    <constraint firstItem="boton-volver" firstAttribute="top" secondItem="boton-otro-dato" secondAttribute="bottom" constant="20" id="c15"/>
-                                    <constraint firstItem="boton-volver" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c16"/>
-                                    <constraint firstItem="boton-volver" firstAttribute="width" constant="190" id="c17"/>
-                                    <constraint firstItem="boton-volver" firstAttribute="height" constant="48" id="c18"/>
+                                    <constraint firstItem="boton-volver" firstAttribute="top" secondItem="boton-otro-dato" secondAttribute="bottom" constant="20" id="c15" />
+                                    <constraint firstItem="boton-volver" firstAttribute="centerX" secondItem="vista-datos" secondAttribute="centerX" id="c16" />
+                                    <constraint firstItem="boton-volver" firstAttribute="width" constant="190" id="c17" />
+                                    <constraint firstItem="boton-volver" firstAttribute="height" constant="48" id="c18" />
                                 </constraints>
                             </view>
 
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" />
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite" />
                         <constraints>
-                            <constraint firstItem="img-fondo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r01"/>
-                            <constraint firstItem="img-fondo" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="r02"/>
-                            <constraint firstItem="img-fondo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r03"/>
-                            <constraint firstItem="img-fondo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r04"/>
+                            <constraint firstItem="img-fondo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r01" />
+                            <constraint firstItem="img-fondo" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="r02" />
+                            <constraint firstItem="img-fondo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r03" />
+                            <constraint firstItem="img-fondo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r04" />
 
-                            <constraint firstItem="vista-inicio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r05"/>
-                            <constraint firstItem="vista-inicio" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r06"/>
-                            <constraint firstItem="vista-inicio" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r07"/>
-                            <constraint firstItem="vista-inicio" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r08"/>
+                            <constraint firstItem="vista-inicio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r05" />
+                            <constraint firstItem="vista-inicio" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r06" />
+                            <constraint firstItem="vista-inicio" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r07" />
+                            <constraint firstItem="vista-inicio" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r08" />
 
-                            <constraint firstItem="vista-datos" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r09"/>
-                            <constraint firstItem="vista-datos" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r10"/>
-                            <constraint firstItem="vista-datos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r11"/>
-                            <constraint firstItem="vista-datos" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r12"/>
+                            <constraint firstItem="vista-datos" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r09" />
+                            <constraint firstItem="vista-datos" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r10" />
+                            <constraint firstItem="vista-datos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r11" />
+                            <constraint firstItem="vista-datos" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r12" />
                         </constraints>
                     </view>
 
                     <connections>
-                        <outlet property="pantallaInicio" destination="vista-inicio" id="o01"/>
-                        <outlet property="pantallaDatos" destination="vista-datos" id="o02"/>
-                        <outlet property="botonMostrar" destination="boton-mostrar-inicio" id="o03"/>
-                        <outlet property="botonArte" destination="boton-arte" id="o04"/>
-                        <outlet property="botonTecnologia" destination="boton-tecnologia" id="o05"/>
-                        <outlet property="botonNaturaleza" destination="boton-naturaleza" id="o06"/>
-                        <outlet property="categoriaLabel" destination="etiqueta-categoria" id="o07"/>
-                        <outlet property="datoLabel" destination="etiqueta-dato" id="o08"/>
-                        <outlet property="tarjeta" destination="tarjeta-dato" id="o09"/>
-                        <outlet property="botonOtroDato" destination="boton-otro-dato" id="o10"/>
-                        <outlet property="botonVolver" destination="boton-volver" id="o11"/>
+                        <outlet property="pantallaInicio" destination="vista-inicio" id="o01" />
+                        <outlet property="pantallaDatos" destination="vista-datos" id="o02" />
+                        <outlet property="botonMostrar" destination="boton-mostrar-inicio" id="o03" />
+                        <outlet property="botonArte" destination="boton-arte" id="o04" />
+                        <outlet property="botonTecnologia" destination="boton-tecnologia" id="o05" />
+                        <outlet property="botonNaturaleza" destination="boton-naturaleza" id="o06" />
+                        <outlet property="categoriaLabel" destination="etiqueta-categoria" id="o07" />
+                        <outlet property="datoLabel" destination="etiqueta-dato" id="o08" />
+                        <outlet property="tarjeta" destination="tarjeta-dato" id="o09" />
+                        <outlet property="botonOtroDato" destination="boton-otro-dato" id="o10" />
+                        <outlet property="botonVolver" destination="boton-volver" id="o11" />
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder"
-                             id="dkx-z0-nzr"
-                             sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder" />
             </objects>
         </scene>
     </scenes>
     <resources>
-        <image name="fondo" width="393" height="852"/>
+        <image name="fondo" width="393" height="852" />
     </resources>
 </document>

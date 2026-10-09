@@ -40,15 +40,15 @@
     if ([argumentos containsObject:@"-captura-arte"] ||
         [argumentos containsObject:@"-captura-datos"]) {
         [self elegirCategoria:@"Arte"];
-        [self irADatos];
+        [self irADatos:nil];
 
     } else if ([argumentos containsObject:@"-captura-tecnologia"]) {
         [self elegirCategoria:@"Tecnología"];
-        [self irADatos];
+        [self irADatos:nil];
 
     } else if ([argumentos containsObject:@"-captura-naturaleza"]) {
         [self elegirCategoria:@"Naturaleza"];
-        [self irADatos];
+        [self irADatos:nil];
     }
 }
 
