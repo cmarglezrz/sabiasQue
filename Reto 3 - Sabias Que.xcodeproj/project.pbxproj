@@ -445,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-Que";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-Que";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,7 +479,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-QueTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reto 3 - Sabias Que.app/Reto 3 - Sabias Que";
@@ -498,7 +498,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-QueTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reto 3 - Sabias Que.app/Reto 3 - Sabias Que";
@@ -515,7 +515,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-QueUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Reto 3 - Sabias Que";
@@ -532,7 +532,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.aruiz.Reto-3---Sabias-QueUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.uveg.mariela.reto3UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Reto 3 - Sabias Que";
