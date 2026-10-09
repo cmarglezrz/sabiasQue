@@ -30,12 +30,23 @@
     [self mostrarInicio];
 
     // Notita: Agregué esto para las pruebas que hice en GitHub Actions
-    if ([[[NSProcessInfo processInfo] arguments]
-            containsObject:@"-captura-datos"]) {
+    
+    NSArray<NSString *> *argumentos = [NSProcessInfo processInfo].arguments;
 
-        [self elegir:@"Arte"];
-        [self irADatos];
-    }
+if ([argumentos containsObject:@"-captura-arte"] ||
+    [argumentos containsObject:@"-captura-datos"]) {
+    [self elegirArte];
+    [self irADatos];
+
+} else if ([argumentos containsObject:@"-captura-tecnologia"]) {
+    [self elegirTecnologia];
+    [self irADatos];
+
+} else if ([argumentos containsObject:@"-captura-naturaleza"]) {
+    [self elegirNaturaleza];
+    [self irADatos];
+}
+
 }
 
 
