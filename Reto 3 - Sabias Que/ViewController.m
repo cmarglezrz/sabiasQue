@@ -1,11 +1,11 @@
 
 #import "ViewController.h"
+#import "GestorCuriosidades.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) NSString *categoria;
-@property (nonatomic, strong) NSDictionary<NSString *, NSArray<NSString *> *> *datos;
-@property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *posiciones;
+@property (nonatomic, strong) GestorCuriosidades *gestor;
 
 @property (nonatomic, strong) UIView *contenido;
 @property (nonatomic, strong) UILabel *datoLabel;
@@ -23,36 +23,13 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.datos = @{
-        @"Arte": @[
-            @"La noche estrellada fue pintada por Vincent van Gogh en 1889.",
-            @"El pigmento ultramarino se obtenía tradicionalmente del lapislázuli.",
-            @"La Mona Lisa fue pintada por Leonardo da Vinci a principios del siglo XVI.",
-            @"El impresionismo recibió su nombre de una pintura de Claude Monet."
-        ],
+    // Inicializar el gestor de curiosidades.
+    self.gestor = [[GestorCuriosidades alloc] init];
 
-        @"Tecnología": @[
-            @"El primer ratón de computadora se construyó con una carcasa de madera.",
-            @"El primer sitio web se puso en línea en 1991.",
-            @"El primer mensaje enviado por ARPANET fue «LO».",
-            @"El código QR fue inventado en Japón en 1994."
-        ],
-
-        @"Naturaleza": @[
-            @"Los pulpos tienen tres corazones.",
-            @"Los tiburones existen desde mucho antes que los árboles.",
-            @"Las mariposas pueden percibir sabores mediante receptores en sus patas.",
-            @"Los ajolotes pueden regenerar extremidades y partes de algunos órganos."
-        ]
-    };
-
-    self.posiciones = [NSMutableDictionary dictionary];
-
-    // Mostrar pantalla principal.
+    // Pantalla principal.
     [self mostrarInicio];
 
-    // Modo especial para GitHub Actions.
-    // Permite capturar la segunda pantalla automáticamente.
+    // Notita: Agregué esto para las pruebas que hice en GitHub Actions
     if ([[[NSProcessInfo processInfo] arguments]
             containsObject:@"-captura-datos"]) {
 
@@ -60,6 +37,9 @@
         [self irADatos];
     }
 }
+
+
+    /// Asignar colores a las categorías, etc. 
 
 #pragma mark - Colores
 
@@ -132,16 +112,17 @@
     return button;
 }
 
-#pragma mark - Preparar pantalla
+#pragma mark - Preparar pantalla y fondo
 
 - (void)prepararPantalla {
 
+    // Este es para eliminar el contenido de la pantalla anterior.
     [self.contenido removeFromSuperview];
 
     UIView *panel = [[UIView alloc] init];
 
     panel.translatesAutoresizingMaskIntoConstraints = NO;
-    panel.backgroundColor = [UIColor whiteColor];
+    panel.backgroundColor = [UIColor clearColor];
 
     [self.view addSubview:panel];
 
@@ -151,6 +132,27 @@
         [panel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
         [panel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor]
     ]];
+
+    // Agregar la imagen de fondo.
+    UIImage *imagen = [UIImage imageNamed:@"fondo"];
+
+    if (imagen != nil) {
+
+        UIImageView *fondo = [[UIImageView alloc] initWithImage:imagen];
+
+        fondo.translatesAutoresizingMaskIntoConstraints = NO;
+        fondo.contentMode = UIViewContentModeScaleAspectFill;
+        fondo.clipsToBounds = YES;
+
+        [panel addSubview:fondo];
+
+        [NSLayoutConstraint activateConstraints:@[
+            [fondo.topAnchor constraintEqualToAnchor:panel.topAnchor],
+            [fondo.bottomAnchor constraintEqualToAnchor:panel.bottomAnchor],
+            [fondo.leadingAnchor constraintEqualToAnchor:panel.leadingAnchor],
+            [fondo.trailingAnchor constraintEqualToAnchor:panel.trailingAnchor]
+        ]];
+    }
 
     self.contenido = panel;
 }
@@ -307,6 +309,9 @@
     UIView *tarjeta = [[UIView alloc] init];
 
     tarjeta.translatesAutoresizingMaskIntoConstraints = NO;
+    tarjeta.backgroundColor =
+        [[UIColor whiteColor] colorWithAlphaComponent:0.90];
+
     tarjeta.layer.borderWidth = 2;
 
     tarjeta.layer.borderColor =
@@ -371,31 +376,17 @@
         [volver.heightAnchor constraintEqualToConstant:48]
     ]];
 
-    // Mostrar automáticamente la primera curiosidad.
+    // Mostrar la primera curiosidad de la categoría.
     [self mostrarOtroDato];
 }
 
-#pragma mark - Cambiar dato curioso
+#pragma mark - Mostrar curiosidad
 
 - (void)mostrarOtroDato {
 
-    NSArray<NSString *> *lista =
-        self.datos[self.categoria];
-
-    if (lista.count == 0) {
-        self.datoLabel.text = @"No hay datos disponibles.";
-        return;
-    }
-
-    NSUInteger posicion =
-        [self.posiciones[self.categoria] unsignedIntegerValue]
-        % lista.count;
-
-    self.datoLabel.text = lista[posicion];
-
-    self.posiciones[self.categoria] =
-        @((posicion + 1) % lista.count);
+    // Pide la siguiente curiosidad al gestor.
+    self.datoLabel.text =
+        [self.gestor obtenerDato:self.categoria];
 }
 
 @end
-
